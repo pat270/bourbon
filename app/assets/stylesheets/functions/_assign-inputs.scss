@@ -1,4 +1,9 @@
 @function assign-inputs($inputs, $pseudo: null) {
+  @if $disable-bourbon-deprecation-warnings == false {
+    @warn "[Bourbon] [Deprecation] `assign-inputs` is deprecated and will be " +
+    "removed in 5.0.0.";
+  }
+
   $list: ();
 
   @each $input in $inputs {
